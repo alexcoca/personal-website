@@ -12,67 +12,67 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">I'm Alexandru Coca</div>
+    <div class="text-3xl py-3 font-bold">PhD Student at the University of Cambridge</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        I am a final year PhD student at the University of Cambridge where I am completing my thesis on "Robust Understanding of Task-Oriented Dialogues". 
+        A keen engineer and researcher, I am interested in building systems that can understand and reason about the world, with the focust on development of 
+        intelligent agents capable of adapting to their user and open-ended environments. Other areas of interest include robustness and uncertainty in large language models, 
+        planning for complex tasks, symbolic reasoning and technical AI safety.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn" href="https://www.linkedin.com/in/alexandru-coca-21256255/" target="_blank">Let's connect!</a>
+      <a href="https://github.com/alexcoca" target="_blank" class="btn btn-outline ml-5">
+        View My Work
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects {"</>"}</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="ASPERA: A Simulated Environment to Evaluate Planning for Complex Action Execution"
+    img="/aspera.png"
+    desc="As part of my research internship hosted by the Siri Understanding team at Apple, I conducted an intial evaluation of
+     the ability of large language models to carry out complex tasks on behalf of users when given access to their digital context. 
+     The evaluation relies on a simulated execution environment equipped with functional outcome validation and data generation 
+     capabilities. Initial evaluation results on a benchmark of 250 complex tasks have been presented in Vienna at ACL 2025."
+    url="https://github.com/apple/ml-aspera"
+    badge="FEATURED"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Programmable Task-Oriented Dialogue Systems with Execution and Policy Feedback"
+    img="/pytod.png"
+    desc="Task-oriented dialogue agents provide natural language interfaces which enable seamless interaction between users and web- or mobile based applications. A highly 
+    accurate estimation of the relevant task information provided by the user is crucial for the success of the dialogue system. However, state-of-the-art research systems 
+    often model state estimation in isolation, without considering user interaction policy and the environment where the dialogue system operates. As part of my research internship 
+    hosted by the Siri Understanding team at Apple, I explored symbolic reasoning techniques which enable seamless integration of feedback from execution and policy into the state estimation 
+    process. This enables very small language models to self-correct their errors or to efficiently commmunicate with larger models, ultimately resulting in improved state estimation robustness and accuracy 
+    as the convesation progresses. (Image credit: Seldon.io)"
+    url="https://github.com/apple/ml-pytod"
+    badge="FEATURED"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+    title="Distributed Kernel SHAP with ray"
+    img="/distributed_kernel_shap.png"
+    desc="Kernel SHAP is a powerful explainability technique for machine learning models. However, it is computationally expensive to compute the SHAP values for large models. 
+    This project implements a distributed implementation of Kernel SHAP using Ray and Kubernetes. (Image credit: Scott Lundberg")
+    url="https://github.com/alexcoca/DistributedKernelShap"
+    badge="OPEN SOURCE"
+    />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Alibi Explain"
+    img="/alibi_explain.png"
+    desc="Alibi is a source-available Python library aimed at machine learning model inspection and interpretation. The focus of the library is to provide high-quality implementations 
+    of black-box, white-box, local and global explanation methods for classification and regression models. As a research engineer at Seldon, I was one of the main contributiors, integrating, documenting and improving 
+    algorithms such as SHAP and Anchor Explanations."
+    url="https://docs.seldon.io/projects/alibi/en/latest/"
+  />  
 </BaseLayout>
