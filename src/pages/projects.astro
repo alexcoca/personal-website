@@ -3,49 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+<BaseLayout title="Publications" sideBarActiveItemID="projects">
+  <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
+    <div class="mb-8">
+      <svg class="w-24 h-24 mx-auto mb-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      </svg>
+    </div>
+    
+    <div class="text-4xl font-bold mb-4" style="color: #85B09A;">Publications</div>
+    
+    <div class="text-xl text-gray-600 mb-8 max-w-2xl">
+      This page is currently under construction. In the meantime, you can find my complete publication list and academic profile on:
+    </div>
+    
+    <div class="space-y-6 max-w-2xl">
+      <a href="https://aclanthology.org/people/a/alexandru-coca/" target="_blank" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="text-xl font-semibold mb-2" style="color: #85B09A;">ACL Anthology</div>
+        <div class="text-gray-700">Complete list of my NLP publications and conference papers</div>
+      </a>
+      
+      <a href="https://scholar.google.com/citations?user=WqcTDlkAAAAJ&hl=en" target="_blank" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="text-xl font-semibold mb-2" style="color: #85B09A;">Google Scholar</div>
+        <div class="text-gray-700">Academic profile, citations, and research metrics</div>
+      </a>
+    </div>
+    
+    <div class="mt-8 text-sm text-gray-500">
+      For a detailed overview of my research experience, check out my <a href="/cv" class="underline" style="color: #85B09A;">CV</a>.
+    </div>
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
 </BaseLayout>
