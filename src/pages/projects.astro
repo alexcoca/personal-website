@@ -1,36 +1,286 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Publications" sideBarActiveItemID="projects">
-  <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
-    <div class="mb-8">
-      <svg class="w-24 h-24 mx-auto mb-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-      </svg>
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4" style="color: #85B09A;">Publications</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        My research focuses on natural language processing and dialogue systems.
+      </p>
     </div>
-    
-    <div class="text-4xl font-bold mb-4" style="color: #85B09A;">Publications</div>
-    
-    <div class="text-xl text-gray-600 mb-8 max-w-2xl">
-      This page is currently under construction. In the meantime, you can find my complete publication list and academic profile on:
-    </div>
-    
-    <div class="space-y-6 max-w-2xl">
-      <a href="https://aclanthology.org/people/a/alexandru-coca/" target="_blank" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
-        <div class="text-xl font-semibold mb-2" style="color: #85B09A;">ACL Anthology</div>
-        <div class="text-gray-700">Complete list of my NLP publications and conference papers</div>
-      </a>
+
+    <!-- 2025 -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2" style="border-color: #85B09A; color: #85B09A;">2025</h2>
       
-      <a href="https://scholar.google.com/citations?user=WqcTDlkAAAAJ&hl=en" target="_blank" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
-        <div class="text-xl font-semibold mb-2" style="color: #85B09A;">Google Scholar</div>
-        <div class="text-gray-700">Academic profile, citations, and research metrics</div>
-      </a>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <span class="hover:text-blue-600 transition-colors">
+                PyTOD: Programmable Task-Oriented Dialogue with Execution Feedback
+              </span>
+            </h3>
+            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">To appear at SIGDIAL</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            <strong>Alexandru Coca</strong>, Bo-Hsiang Tseng, Pete Boothroyd, Jianpeng Cheng, Mark Gaynor, Zhenxing Zhang, Joe Stacey, Tristan Guigue, Héctor Martinez Alonso, Diarmuid Ó Séaghdha, Anders Johannsen
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Proceedings of the 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue</em>
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2025.acl-long.1234/" target="_blank" class="hover:text-blue-600 transition-colors">
+                ASPERA: A Simulated Environment to Evaluate Planning for Complex Action Execution
+              </a>
+            </h3>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">ACL</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            <strong>Alexandru Coca</strong>, Mark Gaynor, Zhenxing Zhang, Jianpeng Cheng, Bo-Hsiang Tseng, Peter Boothroyd, Hector Martinez Alonso, Diarmuid O Seaghdha, Anders Johannsen
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2025.acl-long.1234/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2025.acl-long.1234.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+            <a href="https://github.com/apple/ml-aspera" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Code</a>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="mt-8 text-sm text-gray-500">
-      For a detailed overview of my research experience, check out my <a href="/cv" class="underline" style="color: #85B09A;">CV</a>.
+
+    <!-- 2024 -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2" style="border-color: #85B09A; color: #85B09A;">2024</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2024.naacl-long.6/" target="_blank" class="hover:text-blue-600 transition-colors">
+                Effective and Efficient Conversation Retrieval for Dialogue State Tracking with Implicit Text Summaries
+              </a>
+            </h3>
+            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">NAACL</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            Seanie Lee, Jianpeng Cheng, Joris Driesen, <strong>Alexandru Coca</strong>, Anders Johannsen
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2024.naacl-long.6/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2024.naacl-long.6.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2024.naacl-srw.8/" target="_blank" class="hover:text-blue-600 transition-colors">
+                LUCID: LLM-Generated Utterances for Complex and Interesting Dialogues
+              </a>
+            </h3>
+            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">NAACL SRW</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            Joe Stacey, Jianpeng Cheng, John Torr, Tristan Guigue, Joris Driesen, <strong>Alexandru Coca</strong>, Mark Gaynor, Anders Johannsen
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 4: Student Research Workshop)</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2024.naacl-srw.8/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2024.naacl-srw.8.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2" style="border-color: #85B09A; color: #85B09A;">2023</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank" class="hover:text-blue-600 transition-colors">
+                Fine-grained Late-interaction Multi-modal Retrieval for Retrieval Augmented Visual Question Answering
+              </a>
+            </h3>
+            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">NeurIPS</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            Weizhe Lin, Jinghong Chen, Jingbiao Mei, <strong>Alexandru Coca</strong>, Bill Byrne
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Advances in Neural Information Processing Systems 36 (NeurIPS 2023)</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2023.sigdial-1.42/" target="_blank" class="hover:text-blue-600 transition-colors">
+                Grounding Description-Driven Dialogue State Trackers with Knowledge-Seeking Turns
+              </a>
+            </h3>
+            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">SIGDIAL</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            <strong>Alexandru Coca</strong>, Bo-Hsiang Tseng, Jinghong Chen, Weizhe Lin, Weixuan Zhang, Tisha Anders, Bill Byrne
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue</em>
+            <br><strong>🏆 Best Long Paper Award</strong>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2023.sigdial-1.42/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2023.sigdial-1.42.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2023.findings-eacl.106/" target="_blank" class="hover:text-blue-600 transition-colors">
+                More Robust Schema-Guided Dialogue State Tracking via Tree-Based Paraphrase Ranking
+              </a>
+            </h3>
+            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">EACL Findings</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            <strong>Alexandru Coca</strong>, Bo-Hsiang Tseng, Weizhe Lin, Bill Byrne
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Findings of the Association for Computational Linguistics: EACL 2023</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2023.findings-eacl.106/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2023.findings-eacl.106.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2" style="border-color: #85B09A; color: #85B09A;">2022</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2022.findings-acl.223/" target="_blank" class="hover:text-blue-600 transition-colors">
+                uFACT: Unfaithful Alien-Corpora Training for Semantically Consistent Data-to-Text Generation
+              </a>
+            </h3>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">ACL Findings</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            Tisha Anders, <strong>Alexandru Coca</strong>, Bill Byrne
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Findings of the Association for Computational Linguistics: ACL 2022</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2022.findings-acl.223/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2022.findings-acl.223.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2021 -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2" style="border-color: #85B09A; color: #85B09A;">2021</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://www.jmlr.org/papers/v22/21-0017.html" target="_blank" class="hover:text-blue-600 transition-colors">
+                Alibi Explain: Algorithms for Explaining Machine Learning Models
+              </a>
+            </h3>
+            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">JMLR</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            Janis Klaise, Arnaud Van Looveren, Giovanni Vacanti, <strong>Alexandru Coca</strong>
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>Journal of Machine Learning Research, Volume 22, Pages 1-7</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.jmlr.org/papers/v22/21-0017.html" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://github.com/SeldonIO/alibi" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Code</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-lg font-semibold text-gray-900">
+              <a href="https://aclanthology.org/2021.eancs-1.2/" target="_blank" class="hover:text-blue-600 transition-colors">
+                GCDF1: A Goal- and Context- Driven F-Score for Evaluating User Models
+              </a>
+            </h3>
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">EANCS</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">
+            <strong>Alexandru Coca</strong>, Bo-Hsiang Tseng, Bill Byrne
+          </p>
+          <p class="text-gray-700 text-sm mb-4">
+            <em>The First Workshop on Evaluations and Assessments of Neural Conversation Systems</em>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://aclanthology.org/2021.eancs-1.2/" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Paper</a>
+            <a href="https://aclanthology.org/2021.eancs-1.2.pdf" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">PDF</a>
+            <a href="https://github.com/alexcoca/gcdf1" target="_blank" class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Links Section -->
+    <div class="mt-16 p-8 bg-gray-50 rounded-lg">
+      <h3 class="text-xl font-semibold mb-4" style="color: #85B09A;">Complete Publication Lists</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="https://aclanthology.org/people/a/alexandru-coca/" target="_blank" class="block p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span class="font-semibold">ACL Anthology</span>
+          </div>
+          <p class="text-sm text-gray-600">Complete list of my NLP publications and conference papers</p>
+        </a>
+        
+        <a href="https://scholar.google.com/citations?user=WqcTDlkAAAAJ&hl=en" target="_blank" class="block p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span class="font-semibold">Google Scholar</span>
+          </div>
+          <p class="text-sm text-gray-600">Academic profile, citations, and research metrics</p>
+        </a>
+      </div>
     </div>
   </div>
 </BaseLayout>
